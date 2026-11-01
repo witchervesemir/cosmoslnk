@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050713">
+    <title>COSMOS | Mini Evren</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+    <!-- COSMOS INTRO SCREEN -->
+    <div id="intro-screen">
+        <div class="intro-stars"></div>
+
+        <div class="intro-content">
+            <div class="intro-orbit">
+                <div class="intro-planet"></div>
+                <div class="intro-ring"></div>
+            </div>
+
+            <h1 class="intro-title">COSMOS</h1>
+
+            <p class="intro-subtitle">
+                EXPLORE THE INFINITE
+            </p>
+
+            <div class="intro-loader">
+                <div class="intro-loader-fill"></div>
+            </div>
+
+            <p class="intro-loading-text">
+                INITIALIZING UNIVERSE...
+            </p>
+        </div>
+
+        <div class="intro-version">COSMOS SYSTEMS / 2026</div>
+    </div>
+
+
+    <div class="stars" id="stars"></div>
+    <div class="nebula"></div>
+
+    <header class="navbar">
+        <a href="#" class="logo">
+            <span class="logo-icon">✦</span>
+            COSMOS<span class="logo-dot">.</span>
+        </a>
+
+        <div class="nav-center">SOLAR SYSTEM EXPLORER</div>
+
+        <div class="nav-status">
+            <span class="status-dot"></span>
+            SYSTEM ONLINE
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-label">WELCOME TO THE UNIVERSE</div>
+            <h1>EXPLORE THE <span>UNKNOWN.</span></h1>
+            <p>Güneş sisteminin gizemlerini keşfet. Bir gezegen seç ve yolculuğa başla.</p>
+        </section>
+
+        <section class="universe-container">
+
+            <div class="universe-info">
+                <span class="live-dot"></span>
+                LIVE SOLAR SYSTEM
+            </div>
+
+            <div class="solar-system" id="solarSystem">
+
+                <div class="sun">
+                    <div class="sun-glow"></div>
+                    <div class="sun-core"></div>
+                    <span class="sun-label">SUN</span>
+                </div>
+
+                <div class="orbit orbit-mercury">
+                    <button class="planet mercury" data-planet="mercury" aria-label="Merkür"></button>
+                </div>
+
+                <div class="orbit orbit-venus">
+                    <button class="planet venus" data-planet="venus" aria-label="Venüs"></button>
+                </div>
+
+                <div class="orbit orbit-earth">
+                    <button class="planet earth" data-planet="earth" aria-label="Dünya">
+                        <span class="earth-moon"></span>
+                    </button>
+                </div>
+
+                <div class="orbit orbit-mars">
+                    <button class="planet mars" data-planet="mars" aria-label="Mars"></button>
+                </div>
+
+                <div class="orbit orbit-jupiter">
+                    <button class="planet jupiter" data-planet="jupiter" aria-label="Jüpiter"></button>
+                </div>
+
+                <div class="orbit orbit-saturn">
+                    <button class="planet saturn" data-planet="saturn" aria-label="Satürn">
+                        <span class="saturn-ring"></span>
+                    </button>
+                </div>
+
+                <div class="orbit orbit-uranus">
+                    <button class="planet uranus" data-planet="uranus" aria-label="Uranüs"></button>
+                </div>
+
+                <div class="orbit orbit-neptune">
+                    <button class="planet neptune" data-planet="neptune" aria-label="Neptün"></button>
+                </div>
+
+            </div>
+
+            <div class="planet-tooltip" id="planetTooltip">
+                Bir gezegene tıkla
+            </div>
+
+            <div class="zoom-controls">
+                <button id="zoomIn" aria-label="Yakınlaştır">+</button>
+                <button id="zoomOut" aria-label="Uzaklaştır">−</button>
+                <button id="resetZoom" aria-label="Sıfırla">↺</button>
+            </div>
+
+            <button class="pause-button" id="pauseButton">
+                <span id="pauseIcon">Ⅱ</span>
+                <span id="pauseText">ANİMASYONU DURDUR</span>
+            </button>
+
+        </section>
+
+        <section class="planet-section">
+            <div class="section-heading">
+                <div>
+                    <span class="small-label">THE SOLAR FAMILY</span>
+                    <h2>GEZEGENLERİ KEŞFET</h2>
+                </div>
+                <span class="planet-count">08 PLANETS</span>
+            </div>
+
+            <div class="planet-cards">
+
+                <button class="planet-card" data-planet="mercury">
+                    <div class="card-planet mercury-card"></div>
+                    <span>01 / TERRESTRIAL</span>
+                    <h3>Merkür</h3>
+                    <p>Güneş'e en yakın gezegen.</p>
+                </button>
+
+                <button class="planet-card" data-planet="venus">
+                    <div class="card-planet venus-card"></div>
+                    <span>02 / TERRESTRIAL</span>
+                    <h3>Venüs</h3>
+                    <p>En sıcak gezegen.</p>
+                </button>
+
+                <button class="planet-card" data-planet="earth">
+                    <div class="card-planet earth-card"></div>
+                    <span>03 / TERRESTRIAL</span>
+                    <h3>Dünya</h3>
+                    <p>Yaşamın bilindiği gezegen.</p>
+                </button>
+
+                <button class="planet-card" data-planet="mars">
+                    <div class="card-planet mars-card"></div>
+                    <span>04 / TERRESTRIAL</span>
+                    <h3>Mars</h3>
+                    <p>Kızıl gezegen.</p>
+                </button>
+
+                <button class="planet-card" data-planet="jupiter">
+                    <div class="card-planet jupiter-card"></div>
+                    <span>05 / GAS GIANT</span>
+                    <h3>Jüpiter</h3>
+                    <p>En büyük gezegen.</p>
+                </button>
+
+                <button class="planet-card" data-planet="saturn">
+                    <div class="card-planet saturn-card"></div>
+                    <span>06 / GAS GIANT</span>
+                    <h3>Satürn</h3>
+                    <p>Ünlü halkalarıyla tanınır.</p>
+                </button>
+
+                <button class="planet-card" data-planet="uranus">
+                    <div class="card-planet uranus-card"></div>
+                    <span>07 / ICE GIANT</span>
+                    <h3>Uranüs</h3>
+                    <p>Yan yatmış ekseniyle dikkat çeker.</p>
+                </button>
+
+                <button class="planet-card" data-planet="neptune">
+                    <div class="card-planet neptune-card"></div>
+                    <span>08 / ICE GIANT</span>
+                    <h3>Neptün</h3>
+                    <p>Güneş sisteminin en uzak gezegeni.</p>
+                </button>
+
+            </div>
+        </section>
+
+        <section class="fact-section">
+            <div class="fact-icon">✧</div>
+            <div>
+                <span class="small-label">DID YOU KNOW?</span>
+                <p id="randomFact">Güneş, Güneş sisteminin toplam kütlesinin yaklaşık %99,86'sını oluşturur.</p>
+            </div>
+            <button id="newFact">YENİ BİLGİ ↗</button>
+        </section>
+
+    </main>
+
+    <div class="modal-overlay" id="planetModal">
+        <div class="planet-modal">
+
+            <button class="close-modal" id="closeModal">✕</button>
+
+            <div class="modal-visual" id="modalVisual">
+                <div class="modal-planet" id="modalPlanet"></div>
+            </div>
+
+            <div class="modal-content">
+                <span class="small-label" id="modalType">PLANET DATA</span>
+                <h2 id="modalName">DÜNYA</h2>
+                <p id="modalDescription"></p>
+
+                <div class="modal-stats">
+                    <div>
+                        <span>ÇAP</span>
+                        <strong id="modalDiameter"></strong>
+                    </div>
+                    <div>
+                        <span>ORT. SICAKLIK</span>
+                        <strong id="modalTemperature"></strong>
+                    </div>
+                    <div>
+                        <span>UYDU SAYISI</span>
+                        <strong id="modalMoons"></strong>
+                    </div>
+                    <div>
+                        <span>YIL SÜRESİ</span>
+                        <strong id="modalYear"></strong>
+                    </div>
+                </div>
+
+                <div class="modal-extra">
+                    <span>✦ INTERESTING FACT</span>
+                    <p id="modalFact"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="logo">COSMOS<span class="logo-dot">.</span></div>
+        <p>THE UNIVERSE IS YOURS TO EXPLORE.</p>
+        <span>© 2026 COSMOS PROJECT</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+6
